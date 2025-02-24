@@ -15,7 +15,7 @@ connectDB();
 app.use(cors({ origin: 'https://accredian-frontend-task-nj16.vercel.app', credentials: true })); 
 app.use(express.json());
 
-app.post('/api', submitReferral);
+app.post('/', submitReferral);
 
 // Simple GET method
 app.get('/', (req, res) => {
