@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');  
 const connectDB = require('./config/db');
 const referralRoutes = require('./routes/referralRoutes');
+const { submitReferral } = require('../controllers/referralController');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -14,7 +15,7 @@ connectDB();
 app.use(cors({ origin: 'https://accredian-frontend-task-nj16.vercel.app', credentials: true })); 
 app.use(express.json());
 
-app.use('/api', referralRoutes);
+app.post('/api', submitReferral);
 
 // Simple GET method
 app.get('/', (req, res) => {
