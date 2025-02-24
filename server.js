@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true })); // Enable CORS
+app.use(cors({ origin: 'https://accredian-frontend-task-nj16.vercel.app', credentials: true })); // Enable CORS
 
 app.use(express.json());
 
