@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');  
 const connectDB = require('./config/db');
 const referralRoutes = require('./routes/referralRoutes');
-const { submitReferral } = require('../controllers/referralController');
+const { submitReferral } = require('./controllers/referralController');
 const dotenv = require('dotenv');
 
 dotenv.config();
